@@ -1,0 +1,57 @@
+{extends file="base_modal"}
+{block name='modal_content'}
+<div id="reclaim" class="inner-content">
+  <h2><span class="icon"></span>EXCHANGE FOR STORE CREDITS</h2>
+  <div class="padder">
+    <div class="separator"></div>
+    <div class="clearfix">
+      <form name="reclaim-bulk" action="" method="POST">
+        <div class="error-message js-error-message"></div>
+        <div class="success-message js-success-message"></div>
+        <div class="panes">
+          <div class="pane step1">
+            <div class="warn-panel">
+              <div class="exagon">
+                <div class="hand"></div>
+                <span>ATTENTION</span>
+              </div>
+            </div>
+            
+            <p>This is the <strong>last pledge</strong> in your account with <span class="important">ALPHA ACCESS</span>.  If you go through with this operation, you will <strong>permanently</strong> lose access to all alpha modules.</p>
+    
+            <span class="submit-wrapper js-reclaim-next right disabled">
+              <span class="submit-hover trans-02s trans-opacity"></span>
+              <input type="submit" value="CONTINUE" class="trans-02s trans-color trans-background" />
+            </span>
+          </div>
+    
+          <div class="pane step2">
+            <p class="head">You are about to reclaim <strong>{$item_name}</strong>. This will <span class="important">delete the pledge from your account</span> and give you <strong>{$item_price}</strong> in store credits.</p>
+          
+            <p><strong style="color: red;">WARNING!<br/>This action is PERMANENT and cannot be undone.</strong></p>
+            <p>Purchases made using store credits are <strong>account bound</strong> and non giftable.</p>
+            
+            <div class="bottom">
+              <p>Type in your password to confirm:</p>
+              <span class="corner-wrapper">
+                <input type="password" name="current_password" value="" class="trans-02s trans-color trans-box-shadow" />
+                <span class="corner corner-top-left"></span>
+                <span class="corner corner-top-right"></span>
+                <span class="corner corner-bottom-left"></span>
+                <span class="corner corner-bottom-right"></span>
+              </span>
+      
+              {* btn submit *}
+              <span class="submit-wrapper js-submit right">
+                <span class="submit-hover trans-02s trans-opacity"></span>
+                <input type="submit" value="RECLAIM" class="trans-02s trans-color trans-background" />
+              </span>
+            </div>
+         </div>
+         </div>
+      </form>
+    </div>
+    <div class="separator"></div>
+  </div>
+</div>
+{/block}
