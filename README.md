@@ -12,6 +12,11 @@ Current features include:
 Planned features include:
 * Add bulk Gift button
 
+
+# Google Chrome Extension
+
+https://chrome.google.com/webstore/detail/star-citizen-bulk-xplorer/hhmhabdjafcnejipbcpfdkdhfolfpheo
+
 # Screenshots
 
 ![New and improved UI](http://i.imgur.com/Om3Zzbv.png "New and improved UI")
