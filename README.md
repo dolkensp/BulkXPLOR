@@ -12,6 +12,9 @@ Current features include:
 Planned features include:
 * Add bulk Gift button
 
+# Installation Instructions
+
+This plugin will only work if HangarXPLOR is already installed. You can get HangarXPLOR from the [Google Chrome Store](https://chrome.google.com/webstore/detail/star-citizen-hangar-xplor/bhkgemjdepodofcnmekdobmmbifemhkc)
 
 # Google Chrome Extension
 
