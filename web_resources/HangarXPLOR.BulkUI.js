@@ -41,6 +41,8 @@ HangarXPLOR._callbacks.MeltConfirm = function(e) {
   var melted = '';
   var errors = '';
 
+  console.log('MeltConfirm', HangarXPLOR._selected)
+
   $('#reclaim .panes').hide();
 
   meltNext()
@@ -53,18 +55,18 @@ HangarXPLOR._callbacks.MeltConfirm = function(e) {
       method: 'POST',
       data: {
         current_password: $('input[name=current_password]', HangarXPLOR.BulkUI.modal.holder).val(),
-        pledge_id: pledge.pledgeId
+        pledge_id: pledge.pledge_id
       },
       headers: { 'X-Rsi-Token': $.cookie('Rsi-Token') },
       success: function(result) {
         if (result.success)
         {
           totalSuccess++;
-          totalMelt += pledge.meltValue;
-          melted += '<li>' + pledge.originalName + ' - ' + pledge.meltValue + '</li>';
+          totalMelt += parseFloat(pledge.pledge_cost.split(" ")[0].replaceAll("$", ""));
+          melted += '<li>' + pledge.pledge_name + ' - ' + pledge.pledge_cost + '</li>';
         } else {
           totalError++;
-          errors += '<li>' + pledge.originalName + ' - ' + result.msg + '</li>';
+          errors += '<li>' + pledge.pledge_name + ' - ' + result.msg + '</li>';
         }
 
         if (--totalCallbacks > 0) {
